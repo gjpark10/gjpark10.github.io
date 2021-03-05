@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <style>
+        * { margin: 0; padding: 0; 
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body {
+            background: black;
+        }
+        a {
+            color: black;
+        }
+        .sort {
+            width: 40px;
+            position: absolute;
+            left: 390px;
+            top: 10px;
+        }
+        .sort1 {
+            width: 40px;
+            position: absolute;
+            left: 240px;
+            top: 10px;
+        }
+        .sort2 {
+            width: 40px;
+            position: absolute;
+            left: 340px;
+            top: 10px;
+        }
+        .sort3 {
+            width: 40px;
+            position: absolute;
+            left: 260px;
+            top: 10px;
+        }
+    </style>
+    <style>
+        body {
+            background-image: url('image6.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .wrapper {
+            width: 80%;
+            padding: 10px 20px;
+            margin: auto;
+            overflow: scroll;
+            -ms-overflow-style: none;
+        }
+    </style>
+    <style>
+        .header {
+            height: auto;
+            margin: 10px 0px;
+            padding: 10px 10px;
+        }
+        .header-image {
+            width: 100%;
+        }
+        .header-href {
+            border-style: none;
+        }
+    </style>
+    <style>
+        .nav {
+            margin: 10px 0px;
+            opacity: 0.7;
+            overflow: hidden;
+        }
+        .navi-menu {
+            background: white;
+            float: left;
+            width: 20%;
+            height: 40px;
+        }
+        .navi-menu:hover {
+            background: grey;
+        }
+        .navi-menu-text {
+            display: block;
+            text-align: center;
+            height: 30px;
+            padding: 4px 0px;
+            border: 1px solid grey;
+            border-right: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 5px black;
+        }
+    </style>
+    <style>
+        .aside-section-wrapper {
+            width: 100%;
+            background-color: rgba(226, 226, 226, 0.5);
+            border-radius: 5px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        .aside-title {
+            height: 70px;
+            margin-left: 20px;
+            padding-top: 10px;
+        }
+        .aside {
+            float: left;
+            width: 34%;
+            margin-top: 20px;
+            margin-left: 1%;
+            height: 500px;
+        }
+        .aside-image {
+            height: 100%;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .section {
+            float: right;   
+            width: 63%;
+            height: 500px;
+            margin-top: 20px;
+            margin-right: 1%;
+        }
+        .article1 {
+            height: 100%;
+        }
+        iframe {
+            border-radius: 10px;
+        }
+        
+        .aside-section-wrapper1 {
+            background-color: rgba(226, 226, 226, 0.5);
+            margin-top: 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .text-wrapper {
+            padding: 20px;
+            padding-top: 0;
+        }
+
+        .aside-section-wrapper2 {
+            background-color: rgba(226, 226, 226, 0.5);
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 5px;
+            height: 470px;
+            position: relative;
+            overflow: hidden;
+        }
+        .button-wrapper {
+            bottom: 20px;
+            width: 100%;
+            height: 10%;
+            left: 4%;
+            position: absolute;
+        }
+        .botton {
+            display: inline-block;
+            width: 30%;
+            height: 80%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px black;
+            text-shadow: 0px 0px 5px black;
+            padding-top: 1%;
+        }
+        .botton:hover {
+            background: rgba(200, 200, 200, 0.8);
+        }
+        .char {
+            margin-left: 5%;
+            margin-top: 10px;
+            width: 200px;
+            height: 300px;
+            border-radius: 5px;
+            float: left;
+        }
+        .char-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .char-wrapper {
+            height: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <style>
+        .footer {
+            width: 100%;
+            float: left;
+            margin-top: 20px;
+            background-color: rgba(226, 226, 226, 0.5);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-title {
+            height: 70px;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .footer-element-wrapper {
+            width: 47%;
+            height: 350px;
+            margin-top: 50px;
+            margin-left: 2%;
+            margin-right: 1%;
+            float: left;
+        }
+    </style>
+    <style>
+        @media screen and (orientation: landscape) {
+        }
+        @media screen and (orientation: portrait) {
+            .header {
+                height: 130px;
+                position: relative;
+                margin-bottom: 40px;
+            }
+            .header-href {
+                position: absolute;
+                top: 70px;
+            }
+
+            .nav {
+                display: block;
+                border: 0;
+                margin: 0;
+            }
+            .navi-menu  {
+                width: 100%;
+            }
+            .navi-menu-text {
+                border-right: 1px solid black;
+            }
+
+            .aside-section-wrapper {
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 800px;
+            margin-top: 40px;
+            }
+            .aside {
+                width: 98%;
+                height: 350px;
+                margin-top: 30px;
+            }
+            .aside-image {
+                height: 100%;
+            }
+            .char {
+                float: none; /*float none처리 안할시 중앙정렬 안됨*/
+                margin: 0 auto;
+            }
+            .char-text {
+                display: none;
+            }
+
+            .section {
+                width: 98%;
+                height: 300px;
+            }
+            .article1 {
+                height: 100%;
+            }
+            iframe {
+                height: 100%;
+            }
+
+            .footer-element-wrapper {
+            width: 100%;
+            }
+        }
+    </style>
+
+    <script src="jquery-3.5.1.js"></script>
+    <style>
+        .img-audio-wrapper {
+            width: 200px;
+            height: 300px;
+            box-shadow: 0px 0px 5px black;
+            border-radius: 5px;
+            float: left;
+            margin-right: 15px;
+        }
+        .audio-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .audio-img:hover {
+            box-shadow: 0px 0px 10px black;
+        }
+    </style>
+    <script>
+        var audio1 = new Audio("Peaceful Sleep.mp3");
+        $(document).ready(function () {  //document필수!!
+            $("#image1").on("click", function() {
+                if (audio1.paused)
+                    audio1.play();
+                else {
+                    audio1.pause();
+                    audio1.currentTime = 0;
+                }
+            });
+        });
+        var audio2 = new Audio("遺サレタ場所／斜光.mp3");
+        $(document).ready(function () {  //document필수!!
+            $("#image2").on("click", function() {
+                if (audio2.paused)
+                    audio2.play();
+                else {
+                    audio2.pause();
+                    audio2.currentTime = 0;
+                }
+            });
+        });
+        var audio3 = new Audio("14. 曖昧ナ希望／氷雨.mp3");
+        $(document).ready(function () {  //document필수!!
+            $("#image3").on("click", function() {
+                if (audio3.paused)
+                    audio3.play();
+                else {
+                    audio3.pause();
+                    audio3.currentTime = 0;
+                }
+            });
+        });
+        var audio4 = new Audio("Nier4.mp3");
+        $(document).ready(function () {  //document필수!!
+            $("#image4").on("click", function() {
+                if (audio4.paused)
+                    audio4.play();
+                else {
+                    audio4.pause();
+                    audio4.currentTime = 0;
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+                var a = document.getElementById("char");
+                var b = document.getElementById("char-text");
+                a.innerHTML = "<img src='char11.png' class='char-img'>"
+                b.style.padding = "20px";
+                b.innerHTML = "<p>자동보병인형 '요르하' 부대의 일원으로서 파견된 범용 전투 모델 안드로이드. 각종 냉병기(대검, 장검, 창) 및 격투술(장비를 착용하지 않을 시엔 발기술 위주의 공격이며 너클을 착용시엔 손기술 위주의 공격)을 이용한 근접 공격과 서포트 시스템 '포드'를 이용한 원거리 공격이 가능. 전투형 타입답게 전투력이 매우 뛰어나다.</p>"
+            $("#char1").on("click", function() {
+                var a = document.getElementById("char");
+                var b = document.getElementById("char-text");
+                a.innerHTML = "<img src='char11.png' class='char-img'>"
+                b.style.padding = "20px";
+                b.innerHTML = "<p>자동보병인형 '요르하' 부대의 일원으로서 파견된 범용 전투 모델 안드로이드. 각종 냉병기(대검, 장검, 창) 및 격투술(장비를 착용하지 않을 시엔 발기술 위주의 공격이며 너클을 착용시엔 손기술 위주의 공격)을 이용한 근접 공격과 서포트 시스템 '포드'를 이용한 원거리 공격이 가능. 전투형 타입답게 전투력이 매우 뛰어나다.</p>"
+            });
+            $("#char2").on("click", function() {
+                var a = document.getElementById("char");
+                var b = document.getElementById("char-text");
+                a.innerHTML = "<img src='char12.png' class='char-img'>";
+                b.style.padding = "20px";
+                b.innerHTML = "<p>정식명칭 요르하 9호 S(Scanner)형이다. 조사임무에 특화된 스캐너 타입 기체로 해킹에 의한 정보수집이 주된 특기인 요르하 부대의 일원. 요르하 부대 중에서는 비교적 감정 표현이 풍부하고 다정다감한 성격을 갖고 있다.</p>"
+            });
+            $("#char3").on("click", function() {
+                var a = document.getElementById("char");
+                var b = document.getElementById("char-text");
+                a.innerHTML = "<img src='char13.png' class='char-img'>";
+                b.style.padding = "20px";
+                b.innerHTML = "<p>A(Attacker)형은 현재는 운용되고 있지 않은 근접 공격에 특화된 요르하의 프로토타입 모델로 2B 및 9S 등 정식 모델의 실용화를 위해 테스트 운용되었다. 과묵한 성격이며 언제나 홀로 행동하고 있다. 나머지 두 기체와 디자인상의 차별점이 크고 전반부인 A / B루트에서는 적으로 한 번 나오고 플레이가 불가능하다. 2B와는 입가의 점 위치까지 같을 정도로 외모가 똑같은데, 이는 요르하 2호 모델이 A2를 베이스로 제작되었기 때문이다.</p>"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a class="header-href" href="http://myweb.kyonggi.ac.kr:8000/~201912061/"><img src='nier_automata_text.png' class="header-image"></a>
+        </div>
+        <div class="nav">
+            <a href="#Introduce" class="nav-link">
+                <div class="navi-menu">
+                <span class="navi-menu-text">Introduce</span>
+                </div>
+            </a>
+            <a href="#Story" class="nav-link">
+                <div class="navi-menu">
+                    <span class="navi-menu-text">Story</span>
+                </div>
+            </a>
+            <a href="#Character" class="nav-link">
+                <div class="navi-menu">
+                    <span class="navi-menu-text">Character</span>
+                </div>
+            </a>
+            <a href="#OST" class="nav-link">
+                <div class="navi-menu">
+                    <span class="navi-menu-text">OST</span>
+                </div>
+            </a>
+            <a href="https://www.jp.square-enix.com/nierautomata/" class="nav-link">
+                <div class="navi-menu">
+                    <span class="navi-menu-text" style="border-right: 1px solid grey;">Official site</span>
+                </div>  
+            </a>
+        </div>
+        <div class="aside-section-wrapper" id="Introduce">
+            <img class="sort" src="22.png">
+            <div class="aside-title"><h1 style="display: inline">Introduce&nbsp;</h1><p style="display: inline">게임소개영상과 이미지입니다.</p><hr></div>
+            <div class="aside">
+                <div class="aside-image">
+                    <img src="image8.jpg" width="100%">
+                    <img src="image9.jpg" width="100%">
+                    <img src="image10.jpg" width="100%">
+                    <img src="image11.jpg" width="100%">
+                    <img src="image12.jpg" width="100%">
+                    <img src="image13.jpg" width="100%">
+                    <img src="image14.jpg" width="100%">
+                </div>
+            </div>
+            <div class="section">
+                <div class="article1">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LLCrzJdF8Z4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="aside-section-wrapper1" id="Story">
+            <img class="sort1" src="22.png">
+            <div class="aside-title"><h1 style="display: inline">Story&nbsp;</h1><p style="display: inline">게임의 설정입니다.</p><hr></div>
+            <div class="text-wrapper">
+                <p>먼 미래.
+
+                    갑자기 침략해온 이성인.
+                    그리고 그들이 내보낸 병기 「기계 생명체」.
+                    압도적 전력의 앞에, 인류는 지상에서 나와 달로 도망쳤다.
+                    
+                    지구를 탈환하기 위해, 인류 측은 안드로이드 병사에 의한 저항군을 조직.
+                    또한, 교착한 전황을 타파하기 위해 신형 안드로이드인 전투용 보병 「요르하」 부대를 투입한다.
+                    
+                    사람도 없는 불모의 땅에서 펼쳐지는 기계 병기와 안드로이드의 치열한 싸움.
+                    이윽고 그것은 알려지지 않은 진실의 문을 열어 버리게 된다……</p>
+            </div>
+        </div>
+        <div class="aside-section-wrapper2" id="Character">
+            <div class="aside-title"><h1 style="display: inline">Character&nbsp;</h1><p style="display: inline">게임의 주인공들입니다.</p><hr></div>
+            <img class="sort2" src="22.png">
+            <div class="char-wrapper">
+                <div class="char" id="char"></div>
+                <div class="char-text" id="char-text"></div>
+            </div>
+            <div class="button-wrapper">
+                <div class="botton" id="char1">2B</div>
+                <div class="botton" id="char2">9S</div>
+                <div class="botton" id="char3">A2</div>
+            </div>
+        </div>
+        <div class="footer" id="OST">
+            <img class="sort3" src="22.png">
+            <div class="footer-title"><h1 style="display: inline">OST&nbsp;</h1><p style="display: inline">이미지 클릭시 음악재생</p><hr></div>
+            <div class="footer-element-wrapper">
+                <div class="img-audio-wrapper">
+                    <img class="audio-img" id="image1" src="image1.jpg">
+                </div>
+                <h3>穏ヤカナ眠リ</h3><h3>Peaceful Sleep</h3>
+            </div>
+            <div class="footer-element-wrapper">
+                <div class="img-audio-wrapper">
+                    <img class="audio-img" id="image2" src="image20.jpg">
+                </div>
+                <h3>遺サレタ場所／斜光</h3><h3>City Ruins - Rays of Light</h3>
+            </div>
+            <div class="footer-element-wrapper">
+                <div class="img-audio-wrapper">
+                    <img class="audio-img" id="image3" src="image17.jpg">
+                </div>
+                <h3>曖昧ナ希望／氷雨</h3><h3>Vague Hope - Cold Rain</h3>
+            </div>
+            <div class="footer-element-wrapper">
+                <div class="img-audio-wrapper">
+                    <img class="audio-img" id="image4" src="image24.jpg">
+                </div>
+                <h3>壊レタ世界ノ歌</h3><h3>Weight of the World</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
